@@ -38,9 +38,21 @@ public class Demo {
         //element4.click();
         //driver.findElement(By.xpath("//input[@id='confirm']")).click();
         //reading text from the browser
-        String str=driver.findElement(By.className("widget-content")).getText();
+        String str=driver.findElement(By.xpath("//div[contains(text(),'This is a sample Text on this page. This is a samp')]")).getText();
         System.out.println(str);
-        driver.close();
+        //reading attribute value
+        String str1=driver.findElement(By.id("textbox1")).getAttribute("value");
+        System.out.println(str1);
+        //find the title of the page - high level not application level(no need of the web element to use these)
+        String str2=driver.getTitle();
+        System.out.println("title of the page is --->"+str2);
+        //checks if the checkbox is selected , if yes returns true
+        boolean flag=driver.findElement(By.id("checkbox1")).isSelected();
+        System.out.println("is the checkbox selected--->"+flag);
+        //main window gets closed
+        //driver.close();
+        //every window will get closed i.e., the main and the child windows will get closed
+        //driver.quit();
     }
 
 }
