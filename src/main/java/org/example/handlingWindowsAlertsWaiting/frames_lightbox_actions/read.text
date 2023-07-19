@@ -1,0 +1,63 @@
+Handling Frames:
+
+Demonstrate the problem statement
+'NoSuchElementException' will be displayed on trying to find the web element which is displayed in an iframe
+Enter text into a text field inside the iframe page
+Frame is a web page which is embedded in another web page, and is used to display multiple pages inside a single web page.
+Developers can also embedded a document to be scrolled inside a frame
+In HTML, <iframe> is the tag used by the Web Developers to display any Frame on the Page.
+View the iframes in www.omayo.blogspot.com page - Right click on the frames and observe that 'This Frame' option will be displayed
+Switch to the required frame and perform operations (View code here)
+First switch to a frame and enter text into text field inside frame - Using switchTo().frame(WebElementOfFrame)
+Switch back to the main page using switchTo().defaultContent()  and type text into the 'Search' text box field
+Finding the number of frames available on the page
+System.out.println(driver.findElements(By.tagName("iframe")).size());
+We can switch to the frames using id locator or name locator also
+driver.switchTo().frame("idvalue");
+driver.switchTo().frame("namevalue");
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Handling Light-box:
+
+Unlike alerts, frames or windows, we need not switch to Lightbox for performing operations.
+http://omayo.blogspot.com/p/lightbox.html
+Light boxes are part of the same HTML web page only.
+Demonstrate a program which handles the light box - Demonstrate here
+Hence it is not required to switch to the lightbox for performing operations on it.
+Real time examples for Light-box
+https://www.flipkart.com/
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+Actions Class: stimulates mouse and keyboard events
+
+Actions is a predefined Class of Selenium WebDriver
+Actions class contain various predefined methods which can simulate Mouse and Keyboard Events
+The below are the different methods of Actions class which we can use in automation for handing Mouse and keyboard actions:
+moveToElement(), click(), perform() and build() methods
+Demonstrate moving the mouse to Blogs menu, followed by Selenium143 menu option and clicking it using mouse - Demonstrate here
+Optimizing the above program using build().perform() - Demonstrate here
+Dont huddle the mouse while handing the mouse actions using Actions class
+dragAndDropBy()
+Demonstrate dragging and dropping the startButton horizontal to the right - Demonstrate here
+Application URL: http://omayo.blogspot.com/p/page3.html
+Demonstrate dragging and dropping the startButton horizontal to the left - Demonstrate here
+contextClick()
+Demonstrate right clicking on Search Box field - Demonstrate here
+doubleClick()
+Demonstrate double clicking on double click text in the omayo blog - Demonstrate here
+dragAndDrop()
+Demonstrate dragging and dropping an element from a location to a different location - Demonstrate here
+Application URL: http://dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html
+keyDown() and keyUp() methods
+Demonstrating opening a link in new tab (Compendium Link on Omayo) - Demonstrate here
+sendKeys()
+Demonstrate typing username, then press tab key, entering password and then pressing tab key and pressing enter key - Demonstrate here
+Login functionality available at the end of the omayo blog page
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Keys Class:
+
+Login using Enter key on http://tutorialsninja.com/demo/index.php?route=account/login
+Demonstrate here
+Use Keys.chord for pressing multiple keys together
+Enter text into the text area field and clearing it using Ctrl + z keys - Demonstrate here
