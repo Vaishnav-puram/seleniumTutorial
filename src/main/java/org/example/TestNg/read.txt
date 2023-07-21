@@ -1,0 +1,129 @@
+TestNG:
+
+TestNG plays a major role in Test Automation Frameworks Development.
+
+Installing TestNG Plug-in in Eclipse IDE:
+
+Checking that TestNG is not available in Eclipse IDE
+Go to Testng.org > Eclipse > Plug-in Installation > Use the latest URL referred at this location
+Check whether TestNG is installed in Eclipse IDE
+
+Configure the Project with TestNG JAR file:
+
+Create a new Maven Project and execute a sample Selenium Script
+Configure the Project with TestNG (By adding Dependency tags)
+
+TestNG Annotations:
+
+TestNG is an API similar to Java and Selenium WebDriver
+TestNG has a huge list of Annotations and below are few annotations we need to learn for Selenium:
+Check the annotations list in TestNG API
+    @Test
+    @BeforeMethod
+    @AfterMethod
+    @BeforeTest
+    @AfterTest
+    @BeforeSuite
+    @AfterSuite
+    @BeforeClass
+    @AfterClass
+    And many more
+
+@Test:
+The purpose of this annotation is to represent the methods inside Java class as Tests.
+This annotation replaces main() method in traditional Java programs - Demonstrate
+Run as 'TestNG Test' and view the execution results in both Eclipse IDE Console and TestNG Results tab
+TestNG Reports:
+    Under test-output folder > index.html
+    Refresh the Project and view the TestNG report generated at 'test-output' > old > index.html
+    Passing a Test
+    Failing @Test annotated methods:
+        If any @Test annotated method fails, it will be displayed as failed test in Eclipse IDE Console, TestNG results tab and default TestNG reports
+        Demonstrate a program in which the @Test annotated method is failing - Demonstrate here
+    Skipping a test in TestNG:
+        throw:
+            If we want to manually throw any exception based on some condition, we have to use throw  - Demonstrate here
+            Syntax: throw new Exception();
+            Exception is the predefined class of Java
+        If we want to manually skip any test method in TestNG, we have to use throw - Demonstrate here
+            Syntax: throw new SkipException();
+            SkipException is the predefined class of TestNG
+
+TestNG Assertions:
+
+We perform testing to verify whether a particular test is passed or failed.
+In the similar way, TestNG provides a predefined Class 'Assert' and its predefined methods assertEquals(), assertNotEquals(), assertTrue(), assertFalse() and fail() to verify whether @Test annotated methods are passed or failed.
+assertEquals()
+Demonstrate a program which uses assertEquals() to verify a failing test - Demonstrate here
+Demonstrate a program which uses assertEquals() to verify a passing test - Demonstrate here
+assertTrue()
+Demonstrate a program which uses assertTrue() to verify a failing test - Demonstrate here
+Demonstrate a program which uses assertTrue() to verify a passing test - Demonstrate here
+assertFalse()
+Demonstrate a program which uses assertFalse() to verify a failing test - Demonstrate here
+Demonstrate a program which uses assertFalse() to verify a passing test - Demonstrate here
+fail()
+Demonstrate a program which fails a test directly - Demonstrate here
+Demonstrate a program which has multiple @Test testNG annotated tests - Demonstrate here
+A single class can have multiple tests,
+Create multiple Tests and execute
+Tests will be executed in alphabetical order
+Demonstrate a program which executes the @Test annotated methods according to their priority - Demonstrate here
+priority attribute of @Test annotation is used to prioritize the tests
+@Test(priority=1)
+Check the priority attribute in TestNG API
+
+TestNG (Part 2):
+
+@BeforeMethod
+Methods annotated with @BeforeMethod annotation will be executed before the @Test annotated methods.
+Used with the methods having the code, which is required to be executed before executing the code in test methods.
+Example: Opening Browser and Application before actually performing any tests on them.
+Demonstrate a program which uses @BeforeMethod and a single @Test method - Demonstrate here
+Demonstrate a program which uses @BeforeMethod and multiple @Test methods - Demonstrate here
+@AfterMethod
+Methods annotated with @AfterMethod annotation will be executed after the @Test annotated methods.
+Used with the methods having the code, which is required to be executed after executing the code in test methods.
+Example: Closing the Application/Browser after the tests are performed on them.
+Demonstrate a program which uses @AfterMethod and a single @Test method - Demonstrate here
+Demonstrate a program which uses @AfterMethod and multiple @Test methods - Demonstrate here
+@BeforeClass
+Methods annotated with @BeforeClass annotation will be executed before executing the Class
+Used with the methods having the code, which is required to be executed before executing the Class code
+Example: Instead of opening application for each and every test, if we want to open the application only once before all the tests in a Class are executed.
+Demonstrate a program which uses @BeforeClass along with other annotated methods - Demonstrate here
+@AfterClass
+Methods annotated with @AfterClass annotation will be executed after executing the Class
+Used with the methods having the code, which is required to be executed after the executing the Class code
+Example: Instead of closing application for each and every test, if we want to close the application only once after all the tests inside the Class got executed.
+Demonstrate a program which uses @AfterTest along with other annotated methods - Demonstrate here
+Executing the Java class files in batch using TestNG.xml
+Instead of running the Classes individually, we can use testng.xml file
+First create multiple classes (Say ClassOne, ClassTwo,Class Three, ClassFour etc) having @Test methods and execute the classes individually
+Create a testng.xml file in the Project and execute all the classes at a go using testng.xml file
+Right click on the Project > Select TestNG > Convert To TestNG
+Suite name in testng file - suite tag - say payments
+Test module name in testng file - test tag - say netbanking
+Create multiple test modules in testng.xml file
+We can specify a group of classes under classes and class tags
+@BeforeTest
+@AfterTest
+@BeforeSuite
+@AfterSuite
+Commenting in testng.xml file - <!-- -->
+Excluding a method from execution by changing the testng.xml file
+<class name="demopack.DemoMavenProject.Demo">  <methods> <exclude name="demoMethodTwo"/>  </methods> </class>
+Or, we can include a specific method that only needs to executed by changing the testng.xml file
+<class name="demopack.DemoMavenProject.Demo">  <methods> <include name="demoMethodTwo"/>  </methods> </class>
+Exclude or include with regular expressions
+<class name="demopack.DemoMavenProject.Demo">  <methods> <include name="demo.*"/>  </methods> </class>
+Executing the tests at package level
+Under test tags, specify the package name - <test> <packages> <package  name="xyz"/></packages> </test>
+Groups
+include a group - view here
+exclude a group (Simply change include to exclude in the above example here)
+@Test(groups={"smoke"})
+More attributes
+dependsOnMethods - before executing the test, the dependent tests will be executed - View here
+enabled=false to stop it from executing- View here
+timeOut=5000 - View here
