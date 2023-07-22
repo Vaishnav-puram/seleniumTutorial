@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <parameter name="A" value="3"></parameter>
+    <parameter name="A" value="1"></parameter>
     <listeners>
         <listener class-name="org.example.TestNg.Listners"></listener>
     </listeners>
-    <test verbose="2" preserve-order="true"
+    <test thread-count="3" parallel="methods" verbose="2" preserve-order="true"
           name="C:/Users/Guest007/Downloads/SeleniumTutorial/src/main/java/org/example/TestNg">
         <classes>
             <class name="org.example.TestNg.ListenersDemo">
-                <methods>
-                    <include name="test1"/>
-                </methods>
             </class>
         </classes>
     </test>
