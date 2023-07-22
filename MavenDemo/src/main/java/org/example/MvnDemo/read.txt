@@ -1,0 +1,56 @@
+Maven (Continued)
+Create a new Maven Project
+Create any class ending with the name 'Test' say 'OneTest' and write sample Selenium code - view here
+Make sure Maven Surefire plugin is inside the pom.xml file
+Add the latest version of Maven Surefire Plugin
+Go to project director and perform the below commands
+Maven Build Life Cycle Phases
+Clean
+Compile
+Test
+And many
+mvn clean - Cleans the project and removes build errors if any
+mvn compile - compile build phase after maven will identify an compiler error in the code without eclipse ide
+mvn test - performs clean, compile and test
+Maven Surefire Reports
+Also, verifies windows > users > username > .m2 > repository > org for required jars mentioned in pom.xml file
+If not available, it will download the jars from the mvnrepository
+Executing using testng.xml file
+Add the "Maven Surefire Plug-in for TestNG configuration" into the surefire plug-in
+mvn test (Running complete things mentioned in testng.xml)
+mvn -Dtest=ClassTwoTest test (Only specified class tests will be executed)
+Creating Profiles in pom.xml file - View here
+mvn clean test -P Smoke
+
+Jenkins
+
+Automating the initiation of the automation scripts
+Using Jenkins we can schedule and trigger the scripts at early hours if needed
+In Real time, Dev-ops team will setup Jenkins for you in a centralized Server machine.
+download Jenkins > Generic Java Package (war)
+Open command prompt from the place where war file is available and hit the below command
+java -jar jenkins.war
+You will see a password
+Then open localhost:8080 in chrome browser
+After a while, it will ask for password, provide the password
+We can run maven commands in Jenkins
+Manage Jenkins > Global Tool Configurations
+Add Java
+JAVA_HOME
+JDK Path in your machine
+Don't opt for automatic installation
+Add Maven
+Opt for Install Automatically
+Select the latest version of Maven while opting
+And Save & Apply
+Create a new Job in Jenkins
+Jenkins Home > New Item > Give Job name and select 'Freestlye' project
+Copy the Project to the Jenkins folder (C > Users > Username > Jenkins)
+Select Advanced in Jenkins > Select Use custom workspace checkbox
+Directory - Give your Project Path
+Build > Add build step > Invoke top-level Maven targets > Select Maven Version >type test command without mvn in the field and save
+Build Now to Run
+Click on the Results > Output Console
+Installing TestNG Results Plugin
+Manage Jenkins > Plugin Manager > Available > TestNG > Install without restart
+Job > Configure > Post Build Actions > Publish TestNG Results
