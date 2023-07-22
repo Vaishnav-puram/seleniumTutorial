@@ -1,0 +1,7 @@
+20:38:52.033 [main] DEBUG org.example.logs.LogsDemo - Test execution started...
+20:38:52.165 [main] DEBUG org.example.logs.LogsDemo - window is maximised
+20:38:55.809 [main] DEBUG org.example.logs.LogsDemo - link text is being clicked..
+20:38:55.849 [main] DEBUG org.example.logs.LogsDemo - page navigated to back
+20:38:55.870 [main] DEBUG org.example.logs.LogsDemo - page navigated to forward
+20:38:55.881 [main] INFO  org.example.logs.LogsDemo - Success: correct page title displayed
+20:38:55.997 [main] DEBUG org.example.logs.LogsDemo - browser closed
