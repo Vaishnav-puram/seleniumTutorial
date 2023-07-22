@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Guest007/Downloads/SeleniumTutorial/MavenDemo/src/main/java/org/example/MvnDemo">
+        <classes>
+            <class name="org.example.MvnDemo.FourTest">
+                <methods>
+                    <include name="test4"/>
+                </methods>
+            </class>
+            <class name="org.example.MvnDemo.ThreeTest">
+                <methods>
+                    <include name="test3"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
