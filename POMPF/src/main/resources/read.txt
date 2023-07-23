@@ -1,0 +1,10 @@
+POM:
+    - Design Pattern
+    - Create separate class for each and every page
+    - Create objects of those respective pages
+
+PageFactory:
+    - Design Pattern
+    - Automate the initialization to avoid StaleElementReferenceException
+    - every time we use that object it will be re-initialized
+    - Improvises POM
