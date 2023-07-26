@@ -16,7 +16,7 @@ public class Keys4 {
         driver.manage().window().maximize();
         Actions actions = new Actions(driver);
         WebElement element=driver.findElement(By.id("ta1"));
-        actions.keyDown(Keys.SHIFT).sendKeys(element,"vaishnav").build().perform();
+        actions.keyDown(Keys.SHIFT).sendKeys(element,"vaishnav").keyUp(Keys.SHIFT).build().perform();
         driver.close();
 
     }
