@@ -17,7 +17,7 @@ public class Keys1 {
         Actions actions = new Actions(driver);
         WebElement element=driver.findElement(By.xpath("//a[text()='compendiumdev']"));
         //pressing ctrl key and clicking a link and releasing key
-        actions.keyDown(Keys.CONTROL).click(element).keyDown(Keys.CONTROL).build().perform();
+        actions.keyDown(Keys.CONTROL).click(element).keyUp(Keys.CONTROL).build().perform();
         driver.quit();
     }
 }
